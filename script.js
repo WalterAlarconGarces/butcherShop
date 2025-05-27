@@ -99,3 +99,27 @@ document.addEventListener('DOMContentLoaded', function () {
     //     // Podrías añadir aquí lógica para cargarlo de forma diferida o manejar errores.
     // }
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollLinks = document.querySelectorAll('.scroll-link');
+  const offsetPixels = 50; // Define la cantidad de píxeles a desplazar hacia abajo
+
+  scrollLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+      const targetId = this.getAttribute('href').substring(1); // Obtiene el ID del div sin el '#'
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        const targetPosition = targetElement.offsetTop - offsetPixels;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth' // Opcional: para un desplazamiento suave
+        });
+      }
+    });
+  });
+});

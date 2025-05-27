@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    
     <script>
         tailwind.config = {
             theme: {
@@ -28,20 +28,20 @@
 <body class="bg-gray-100 font-sans">
 
     <header class="bg-red-700 shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between items-center">
-            <h1 class="text-2xl sm:text-3xl font-bold text-white">Carnicería "El Asador Criollo"</h1>
+        <div class="container mx-auto px-6 py-4 flex flex-wrap items-center">
+            <h1 class="text-xl sm:text-3xl font-bold text-white">Carnicería "El Asador Criollo"</h1>
 
-            <button id="menu-toggle" class="text-white sm:hidden focus:outline-none">
+            <button id="menu-toggle" class="text-white sm:hidden focus:outline-none ml-auto">
                 <i class="fas fa-bars fa-lg"></i>
             </button>
 
-            <nav id="mobile-menu" class="w-full sm:w-auto mt-4 sm:mt-0 hidden sm:block">
+            <nav id="mobile-menu" class="w-full sm:w-auto sm:ml-auto mt-4 sm:mt-0 hidden sm:block">
                 <ul class="flex flex-col sm:flex-row sm:space-x-4">
-                    <li><a href="#productos" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded">Productos</a></li>
-                    <li><a href="#promociones" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded">Promociones</a></li>
-                    <li><a href="#pedidos" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded">Pedidos</a></li>
-                    <li><a href="#contacto" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded">Contacto</a></li>
-                    <li><a href="#ubicacion" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded">Ubicación</a></li>
+                    <li><a href="#productos" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded scroll-link">Productos</a></li>
+                    <li><a href="#promociones" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded scroll-link">Promociones</a></li>
+                    <li><a href="#pedidos" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded scroll-link">Pedidos</a></li>
+                    <li><a href="#contacto" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded scroll-link">Contacto</a></li>
+                    <li><a href="#ubicacion" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded scroll-link">Ubicación</a></li>
                 </ul>
             </nav>
         </div>
