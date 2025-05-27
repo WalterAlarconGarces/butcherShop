@@ -1,0 +1,117 @@
+/* Importación de Tailwind CSS (asegúrate que esta sea la forma en que lo usas, o usa el CDN en el HTML) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos base del cuerpo y fuentes (si no usas Tailwind config para esto) */
+body {
+  font-family: "Inter", sans-serif;
+  /* Ya aplicado por Tailwind bg-gray-100 */
+}
+
+/* Estilo para la imagen de fondo de la sección hero */
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://placehold.co/1200x400/4A5568/FFF?text=Hero+Background"); /* Placeholder image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Estilo para los títulos de sección */
+.section-title {
+  @apply text-center font-bold text-red-700 mb-8;
+  /* Tamaños ya ajustados en HTML con clases responsivas de Tailwind: text-2xl sm:text-3xl */
+}
+
+/* Estilos para las tarjetas de productos/promociones */
+.card {
+  @apply bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 ease-in-out;
+}
+.card:hover {
+  @apply transform scale-105;
+}
+.card-image {
+  @apply w-full h-48 object-cover; /* Ajustado h-48 para consistencia */
+}
+.card-content {
+  @apply p-5 sm:p-6; /* Ajustado padding */
+}
+.card-title {
+  @apply text-lg sm:text-xl font-semibold text-gray-800 mb-2; /* Ajustado tamaño y margen */
+}
+.card-description {
+  @apply text-sm text-gray-600 mb-3 sm:mb-4; /* Ajustado margen */
+}
+.card-price {
+  @apply text-base sm:text-lg font-bold text-red-600; /* Ajustado tamaño */
+}
+
+/* Estilos para los botones */
+.btn {
+  @apply py-2 px-4 sm:py-3 sm:px-6 rounded-lg font-semibold text-white transition-colors duration-300 ease-in-out;
+  /* Tamaños de texto ya ajustados en HTML con clases responsivas de Tailwind: text-base sm:text-lg */
+}
+.btn-primary {
+  @apply bg-red-600 hover:bg-red-700;
+}
+.btn-secondary { /* Si lo necesitas en el futuro */
+  @apply bg-gray-700 hover:bg-gray-800;
+}
+
+/* Estilos para los campos de formulario */
+.form-input {
+  @apply w-full p-2 sm:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 outline-none;
+  /* Ajustado padding y focus state */
+}
+
+/* Estilos para los botones flotantes */
+.floating-buttons {
+  @apply fixed bottom-4 right-4 z-50 flex flex-col space-y-3; /* Asegura flex-col y space-y */
+}
+.floating-btn, .floating-btn-call {
+  @apply w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-white shadow-lg text-xl sm:text-2xl;
+  /* Ajustado tamaño y tamaño de ícono */
+}
+.floating-btn {
+  @apply bg-green-500 hover:bg-green-600;
+}
+.floating-btn-call {
+  @apply bg-blue-500 hover:bg-blue-600;
+}
+
+/* Estilos para la navegación (especialmente para móvil) */
+/* El menú móvil se controla principalmente con clases de Tailwind en el HTML (hidden, sm:block, etc.) */
+/* Si necesitas estilos adicionales específicos para el menú desplegado: */
+/*
+#mobile-menu.is-open {
+    display: block; // O flex, si es un contenedor flex
+}
+*/
+
+/* Estilos para el Toast (notificaciones) */
+.toast {
+  @apply fixed top-5 right-5 bg-green-500 text-white py-3 px-5 rounded-lg shadow-md transition-all duration-300 ease-in-out transform translate-y-[-150%] opacity-0;
+  z-index: 100; /* Asegurar que esté por encima de otros elementos */
+}
+.toast.show {
+  @apply translate-y-0 opacity-100;
+}
+
+/* Ajustes adicionales para el menú de navegación en el header */
+header nav ul li a {
+    /* Clases de Tailwind ya aplicadas en el HTML para padding, hover, etc. */
+    /* text-sm ya aplicado por Tailwind en el HTML */
+}
+
+/* Pequeño ajuste para el botón de hamburguesa si es necesario, aunque FontAwesome debería manejarlo */
+#menu-toggle i {
+    /* Si necesitas ajustar el tamaño o color específicamente aquí */
+}
+
+/* Para asegurar que el contenedor principal no se desborde en pantallas pequeñas */
+.container {
+    @apply w-full max-w-screen-xl; /* Ejemplo de max-width, ajusta según tu diseño */
+}
+
+/* Si estás usando la directiva @layer de Tailwind 4.x, asegúrate que tu CSS personalizado
+   esté en la capa correcta o después de las utilidades de Tailwind.
+   Si no, simplemente asegúrate que este archivo se cargue después de Tailwind. */

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnicería "El Asador Criollo"</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Colores personalizados si los necesitas fuera de los que ya tienes en style.css
+                        // Ejemplo:
+                        // 'custom-red': '#e53e3e',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <header class="bg-red-700 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex flex-wrap justify-between items-center">
+            <h1 class="text-2xl sm:text-3xl font-bold text-white">Carnicería "El Asador Criollo"</h1>
+
+            <button id="menu-toggle" class="text-white sm:hidden focus:outline-none">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+
+            <nav id="mobile-menu" class="w-full sm:w-auto mt-4 sm:mt-0 hidden sm:block">
+                <ul class="flex flex-col sm:flex-row sm:space-x-4">
+                    <li><a href="#productos" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded">Productos</a></li>
+                    <li><a href="#promociones" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded">Promociones</a></li>
+                    <li><a href="#pedidos" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded">Pedidos</a></li>
+                    <li><a href="#contacto" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded">Contacto</a></li>
+                    <li><a href="#ubicacion" class="block py-2 px-2 text-white hover:bg-red-600 sm:hover:bg-transparent sm:hover:text-red-300 rounded">Ubicación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-bg h-80 sm:h-96 flex items-center justify-center">
+        <div class="text-center px-4">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">Calidad y Tradición en Carnes Chilenas</h2>
+            <p class="text-lg sm:text-xl text-gray-200 mb-8">Los mejores cortes para tus asados y preparaciones.</p>
+            <a href="#productos" class="btn btn-primary text-base sm:text-lg">Ver Productos</a>
+        </div>
+    </section>
+
+    <section id="productos" class="py-12 sm:py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-2xl sm:text-3xl">Nuestros Productos Estrella</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
+                <div class="card">
+                    <img src="lomo_vetado.png" alt="Lomo Vetado" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title">Lomo Vetado</h3>
+                        <p class="card-description">Corte tierno y jugoso, ideal para la parrilla.</p>
+                        <p class="card-price">$15.990 / kg</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="asado_de_tira.png" alt="Asado de Tira" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title">Asado de Tira</h3>
+                        <p class="card-description">Clásico parrillero, lleno de sabor.</p>
+                        <p class="card-price">$12.500 / kg</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="entrana.png" alt="Entraña" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title">Entraña Americana</h3>
+                        <p class="card-description">Delgada y sabrosa, perfecta para un picoteo.</p>
+                        <p class="card-price">$18.990 / kg</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="costillar_de_cerdo.png" alt="Costillar de Cerdo" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title">Costillar de Cerdo</h3>
+                        <p class="card-description">Tierno y jugoso, ideal al horno o parrilla.</p>
+                        <p class="card-price">$9.800 / kg</p>
+                    </div>
+                </div>
+                 <div class="card">
+                    <img src="pollo_entero.png" alt="Pollo Entero de Campo" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title">Pollo Entero de Campo</h3>
+                        <p class="card-description">Criado en libertad, sabor incomparable.</p>
+                        <p class="card-price">$7.500 / unidad</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="longanizas_artesanales.png" alt="Longanizas Artesanales" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title">Longanizas Artesanales</h3>
+                        <p class="card-description">Receta tradicional, perfectas para la parrilla.</p>
+                        <p class="card-price">$8.990 / kg</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="plateada.png" alt="Plateada" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title">Plateada</h3>
+                        <p class="card-description">Ideal para cocción lenta, al horno o cacerola.</p>
+                        <p class="card-price">$11.500 / kg</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="malaya_de_cerdo.png" alt="Malaya de Cerdo" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title">Malaya de Cerdo</h3>
+                        <p class="card-description">Versátil y sabrosa, ideal arrollada o a la parrilla.</p>
+                        <p class="card-price">$10.200 / kg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="promociones" class="py-12 sm:py-16 bg-red-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-2xl sm:text-3xl">Promociones de la Semana</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <div class="card bg-yellow-100 border-2 border-yellow-400">
+                    <img src="pack_parrillero.png" alt="Pack Parrillero" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title text-yellow-700">¡Pack Parrillero!</h3>
+                        <p class="card-description">1kg Lomo Vetado + 1kg Asado de Tira + Longanizas.</p>
+                        <p class="card-price text-xl sm:text-2xl"><span class="line-through text-gray-500 text-base sm:text-lg">$37.480</span> $32.990</p>
+                        <button class="btn btn-primary mt-4 w-full">Aprovechar Oferta</button>
+                    </div>
+                </div>
+                <div class="card bg-green-100 border-2 border-green-400">
+                    <img src="todo_cerdo.png" alt="Oferta Cerdo" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title text-green-700">¡Todo Cerdo!</h3>
+                        <p class="card-description">2kg Costillar de Cerdo + 1kg Malaya.</p>
+                        <p class="card-price text-xl sm:text-2xl"><span class="line-through text-gray-500 text-base sm:text-lg">$29.800</span> $25.500</p>
+                        <button class="btn btn-primary mt-4 w-full">Aprovechar Oferta</button>
+                    </div>
+                </div>
+                <div class="card bg-blue-100 border-2 border-blue-400">
+                    <img src="descuento_cliente.png" alt="Descuento Cliente Frecuente" class="card-image" onerror="this.src='https://placehold.co/400x300/cccccc/969696?text=Imagen+No+Disponible'">
+                    <div class="card-content">
+                        <h3 class="card-title text-blue-700">Cliente Frecuente</h3>
+                        <p class="card-description">10% de descuento en tu próxima compra sobre $20.000.</p>
+                        <p class="card-price text-lg sm:text-xl">¡Te esperamos!</p>
+                        <button class="btn btn-primary mt-4 w-full">Más Información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pedidos" class="py-12 sm:py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-2xl sm:text-3xl">Haz tu Pedido Online</h2>
+            <div class="max-w-2xl mx-auto bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+                <p class="text-gray-700 mb-6 text-center">Completa el formulario y te contactaremos para confirmar tu pedido y coordinar la entrega o retiro.</p>
+                <form id="orderForm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="nombre_pedido" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+                            <input type="text" id="nombre_pedido" name="nombre_pedido" class="form-input" required>
+                        </div>
+                        <div>
+                            <label for="telefono_pedido" class="block text-sm font-medium text-gray-700 mb-1">Teléfono (Ej: 912345678)</label>
+                            <input type="tel" id="telefono_pedido" name="telefono_pedido" pattern="[0-9]{9}" class="form-input" required>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email_pedido" class="block text-sm font-medium text-gray-700 mb-1">Correo Electrónico</label>
+                        <input type="email" id="email_pedido" name="email_pedido" class="form-input">
+                    </div>
+                    <div class="mb-6">
+                        <label for="pedido_detalle" class="block text-sm font-medium text-gray-700 mb-1">Detalle de tu Pedido</label>
+                        <textarea id="pedido_detalle" name="pedido_detalle" rows="4" class="form-input" placeholder="Ej: 1kg Lomo Liso, 500g Longanizas, 1 Pollo Entero..." required></textarea>
+                    </div>
+                    <div class="mb-6">
+                        <label for="tipo_entrega" class="block text-sm font-medium text-gray-700 mb-1">Tipo de Entrega</label>
+                        <select id="tipo_entrega" name="tipo_entrega" class="form-input">
+                            <option value="retiro">Retiro en Tienda</option>
+                            <option value="despacho">Despacho a Domicilio (Consultar cobertura)</option>
+                        </select>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary text-base sm:text-lg w-full md:w-auto">Enviar Pedido</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-12 sm:py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title !text-white text-2xl sm:text-3xl">Contáctanos</h2>
+            <div class="max-w-2xl mx-auto bg-gray-700 p-6 sm:p-8 rounded-lg shadow-lg">
+                <p class="mb-6 text-center">¿Tienes alguna consulta? Envíanos un mensaje.</p>
+                <form id="contactForm">
+                    <div class="mb-6">
+                        <label for="nombre_contacto" class="block text-sm font-medium mb-1">Nombre</label>
+                        <input type="text" id="nombre_contacto" name="nombre_contacto" class="form-input bg-gray-600 text-white border-gray-500 placeholder-gray-400" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email_contacto" class="block text-sm font-medium mb-1">Correo Electrónico</label>
+                        <input type="email" id="email_contacto" name="email_contacto" class="form-input bg-gray-600 text-white border-gray-500 placeholder-gray-400" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="mensaje_contacto" class="block text-sm font-medium mb-1">Mensaje</label>
+                        <textarea id="mensaje_contacto" name="mensaje_contacto" rows="4" class="form-input bg-gray-600 text-white border-gray-500 placeholder-gray-400" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary text-base sm:text-lg w-full md:w-auto">Enviar Mensaje</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="py-12 sm:py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-2xl sm:text-3xl">Encuéntranos Aquí</h2>
+            <div class="bg-white p-2 sm:p-4 rounded-lg shadow-lg">
+                <div class="w-full h-[450px] sm:h-[450px] bg-gray-200 flex items-center justify-center rounded-lg">
+                     <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.299060636501!2d-70.6506!3d-33.4407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a9ee8d9c6f%3A0x30a9f5e5dd5c763a!2sPlaza%20de%20Armas%2C%20Santiago%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1678886543210!5m2!1ses!2scl" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="rounded-lg">
+                </iframe>
+                </div>
+                
+                
+                
+            </div>
+             <div class="text-center mt-6 space-y-1">
+                <p class="text-base sm:text-lg text-gray-700"><strong>Dirección:</strong> Calle Ficticia 123, Santiago Centro</p>
+                <p class="text-base sm:text-lg text-gray-700"><strong>Horario:</strong> Lunes a Sábado: 9:00 - 19:00 hrs | Domingo: 9:00 - 14:00 hrs</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="social" class="py-10 sm:py-12 bg-gray-200">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-6">Síguenos en Redes Sociales</h2>
+            <div class="flex justify-center space-x-4 sm:space-x-6">
+                <a href="#" target="_blank" class="text-gray-700 hover:text-red-600 transition-colors duration-300">
+                    <i class="fab fa-facebook-square fa-2x sm:fa-3x"></i>
+                </a>
+                <a href="#" target="_blank" class="text-gray-700 hover:text-red-600 transition-colors duration-300">
+                    <i class="fab fa-instagram-square fa-2x sm:fa-3x"></i>
+                </a>
+                <a href="#" target="_blank" class="text-gray-700 hover:text-red-600 transition-colors duration-300">
+                    <i class="fab fa-tiktok fa-2x sm:fa-3x"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>© 2024 Carnicería "El Asador Criollo". Todos los derechos reservados.</p>
+            <p>Diseñado con <i class="fas fa-heart text-red-500"></i> para los amantes de la buena carne.</p>
+        </div>
+    </footer>
+
+    <div class="floating-buttons flex flex-col space-y-3">
+        <a href="https://wa.me/56912345678?text=Hola%2C%20quisiera%20hacer%20una%20consulta%2Fo%20pedido." target="_blank" class="floating-btn" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="tel:+56212345678" class="floating-btn-call" aria-label="Llamar por teléfono">
+            <i class="fas fa-phone"></i>
+        </a>
+    </div>
+
+    <div id="toastMessage" class="toast">
+        <p id="toastText"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
